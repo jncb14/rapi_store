@@ -825,16 +825,12 @@
                                                     <tr>
                                                         <th>ID</th>
                                                         <th>Date</th>
-                                                        <th>Customer</th>
-                                                        <th>Items</th>
-                                                        <th>Total</th>
-                                                        <th>Profit</th>
                                                         <th>Actions</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="salesTableBody">
                                                     <tr>
-                                                        <td colspan="7" class="text-center text-muted py-4">No sales records found</td>
+                                                        <td colspan="3" class="text-center text-muted py-4">No sales records found</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -876,17 +872,15 @@
                                             <table class="table table-hover">
                                                 <thead>
                                                     <tr>
-                                                        <th>Name</th>
-                                                        <th>Category</th>
-                                                        <th>Cost/Unit</th>
+                                                        <th>ID</th>
+                                                        <th>Name of Product</th>
                                                         <th>Stock</th>
-                                                        <th>Price</th>
                                                         <th>Actions</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="productsTableBody">
                                                     <tr>
-                                                        <td colspan="6" class="text-center text-muted py-4">No products found</td>
+                                                        <td colspan="4" class="text-center text-muted py-4">No products found</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -928,17 +922,15 @@
                                             <table class="table table-hover">
                                                 <thead>
                                                     <tr>
-                                                        <th>Name</th>
-                                                        <th>Category</th>
-                                                        <th>Unit</th>
-                                                        <th>Cost/Unit</th>
+                                                        <th>ID</th>
+                                                        <th>Name of Product</th>
                                                         <th>Stock</th>
                                                         <th>Actions</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="materialsTableBody">
                                                     <tr>
-                                                        <td colspan="6" class="text-center text-muted py-4">No materials found</td>
+                                                        <td colspan="4" class="text-center text-muted py-4">No materials found</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -1073,11 +1065,9 @@
                                 <table class="table table-bordered sale-items-table">
                                     <thead>
                                         <tr>
-                                            <th>Product</th>
+                                            <th>Product Name</th>
                                             <th>Quantity</th>
-                                            <th>Unit Price</th>
-                                            <th>Discount</th>
-                                            <th>Total</th>
+                                            <th>Price</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -1095,45 +1085,10 @@
                                                     <input type="number" class="form-control unit-price" value="0.00" step="0.01">
                                                 </div>
                                             </td>
-                                            <td>
-                                                <div class="input-group">
-                                                    <span class="input-group-text">₱</span>
-                                                    <input type="number" class="form-control discount" value="0.00" step="0.01">
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="input-group">
-                                                    <span class="input-group-text">₱</span>
-                                                    <input type="number" class="form-control total" value="0.00" step="0.01" readonly>
-                                                </div>
-                                            </td>
                                             <td><button type="button" class="btn btn-sm btn-danger remove-item"><i class="bi bi-trash"></i></button></td>
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
-                        
-                        <div class="sale-summary-card mb-4">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="subtotal" class="form-label">Product Subtotal</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text">₱</span>
-                                            <input type="number" class="form-control" id="subtotal" value="0.00" readonly>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="grandTotal" class="form-label">Grand Total</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text">₱</span>
-                                            <input type="number" class="form-control" id="grandTotal" value="0.00" readonly>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </form>
@@ -1179,11 +1134,9 @@
                                 <table class="table table-bordered sale-items-table">
                                     <thead>
                                         <tr>
-                                            <th>Product</th>
+                                            <th>Product Name</th>
                                             <th>Quantity</th>
-                                            <th>Unit Price</th>
-                                            <th>Discount</th>
-                                            <th>Total</th>
+                                            <th>Price</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -1191,29 +1144,6 @@
                                         <!-- Items will be populated here -->
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
-                        
-                        <div class="sale-summary-card mb-4">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="editSubtotal" class="form-label">Product Subtotal</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text">₱</span>
-                                            <input type="number" class="form-control" id="editSubtotal" value="0.00" readonly>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="editGrandTotal" class="form-label">Grand Total</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text">₱</span>
-                                            <input type="number" class="form-control" id="editGrandTotal" value="0.00" readonly>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </form>
@@ -1237,31 +1167,15 @@
                 <div class="modal-body">
                     <form id="productForm">
                         <div class="row mb-3">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <label for="productName" class="form-label">Product Name</label>
                                 <input type="text" class="form-control" id="productName" required>
                             </div>
-                            <div class="col-md-6">
-                                <label for="productCategory" class="form-label">Category</label>
-                                <select class="form-select" id="productCategory" required>
-                                    <option selected>Select Category</option>
-                                    <option>Spicy Noodles</option>
-                                    <option>Instant Ramyeon</option>
-                                    <option>Non-Spicy Noodles</option>
-                                    <option>Rice Meal</option>
-                                    <!-- <option>Instant Ramyeon</option>
-                                    <option>Non-Spicy Noodles</option> -->
-                                </select>
-                            </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <label for="productStock" class="form-label">Stock Quantity</label>
                                 <input type="number" class="form-control" id="productStock" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="productDescription" class="form-label">Description</label>
-                                <textarea class="form-control" id="productDescription" rows="1"></textarea>
                             </div>
                         </div>
                         
@@ -1277,10 +1191,8 @@
                                 <table class="table table-bordered product-materials-table">
                                     <thead>
                                         <tr>
-                                            <th>Material</th>
+                                            <th>Material Name</th>
                                             <th>Quantity</th>
-                                            <th>Cost/Unit</th>
-                                            <th>Total</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -1292,43 +1204,10 @@
                                                 </select>
                                             </td>
                                             <td><input type="number" class="form-control material-quantity" value="1" min="1"></td>
-                                            <td>
-                                                <div class="input-group">
-                                                    <span class="input-group-text">₱</span>
-                                                    <input type="number" class="form-control material-unit-cost" value="0.00" step="0.01" readonly>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="input-group">
-                                                    <span class="input-group-text">₱</span>
-                                                    <input type="number" class="form-control material-total-cost" value="0.00" step="0.01" readonly>
-                                                </div>
-                                            </td>
                                             <td><button type="button" class="btn btn-sm btn-danger remove-product-material"><i class="bi bi-trash"></i></button></td>
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                            
-                            <div class="row mt-3">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="productCost" class="form-label">Total Product Cost</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text">₱</span>
-                                            <input type="number" class="form-control" id="productCost" step="0.01" readonly>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="productPrice" class="form-label">Selling Price</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text">₱</span>
-                                            <input type="number" class="form-control" id="productPrice" step="0.01" readonly>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </form>
@@ -1353,28 +1232,15 @@
                     <form id="editProductForm">
                         <input type="hidden" id="editProductId">
                         <div class="row mb-3">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <label for="editProductName" class="form-label">Product Name</label>
                                 <input type="text" class="form-control" id="editProductName" required>
                             </div>
-                            <div class="col-md-6">
-                                <label for="editProductCategory" class="form-label">Category</label>
-                                <select class="form-select" id="editProductCategory" required>
-                                    <option selected>Select Category</option>
-                                    <option>Spicy Noodles</option>
-                                    <option>Instant Ramyeon</option>
-                                    <option>Non-Spicy Noodles</option>
-                                </select>
-                            </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <label for="editProductStock" class="form-label">Stock Quantity</label>
                                 <input type="number" class="form-control" id="editProductStock" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="editProductDescription" class="form-label">Description</label>
-                                <textarea class="form-control" id="editProductDescription" rows="1"></textarea>
                             </div>
                         </div>
                         
@@ -1390,10 +1256,8 @@
                                 <table class="table table-bordered product-materials-table">
                                     <thead>
                                         <tr>
-                                            <th>Material</th>
+                                            <th>Material Name</th>
                                             <th>Quantity</th>
-                                            <th>Cost/Unit</th>
-                                            <th>Total</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -1401,27 +1265,6 @@
                                         <!-- Materials will be populated here -->
                                     </tbody>
                                 </table>
-                            </div>
-                            
-                            <div class="row mt-3">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="editProductCost" class="form-label">Total Product Cost</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text">₱</span>
-                                            <input type="number" class="form-control" id="editProductCost" step="0.01" readonly>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="editProductPrice" class="form-label">Selling Price</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text">₱</span>
-                                            <input type="number" class="form-control" id="editProductPrice" step="0.01" readonly>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </form>
@@ -1444,42 +1287,21 @@
                 </div>
                 <div class="modal-body">
                     <form id="materialForm">
-                        <div class="material-form-grid">
-                            <div class="mb-3">
-                                <label for="materialName" class="form-label">Material Name</label>
-                                <input type="text" class="form-control" id="materialName" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="materialCategory" class="form-label">Category</label>
-                                <select class="form-select" id="materialCategory" required>
-                                    <option selected>Select Category</option>
-                                    <option>Transpo</option>
-                                    <option>Packaging</option>
-                                    <option>Raw Materials</option>
-                                    <option>Utilities</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="materialUnit" class="form-label">Unit</label>
-                                <select class="form-select" id="materialUnit" required>
-                                    <option value="piece">Piece</option>
-                                    <option value="pack">Pack</option>
-                                    <option value="box">Box</option>
-                                    <option value="liter">Liter</option>
-                                    <option value="kilogram">Kilogram</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="materialCost" class="form-label">Cost per Unit</label>
-                                <div class="input-group">
-                                    <span class="input-group-text">₱</span>
-                                    <input type="number" class="form-control" id="materialCost" step="0.01" required>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="materialStock" class="form-label">Stock Quantity</label>
-                                <input type="number" class="form-control" id="materialStock" required>
-                            </div>
+                        <div class="mb-3">
+                            <label for="materialName" class="form-label">Material Name</label>
+                            <input type="text" class="form-control" id="materialName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="materialCategory" class="form-label">Category</label>
+                            <input type="text" class="form-control" id="materialCategory" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="materialUnit" class="form-label">Unit</label>
+                            <input type="text" class="form-control" id="materialUnit" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="materialStock" class="form-label">Stock Quantity</label>
+                            <input type="number" class="form-control" id="materialStock" required>
                         </div>
                         <div class="mb-3">
                             <label for="materialDescription" class="form-label">Description</label>
@@ -1506,42 +1328,21 @@
                 <div class="modal-body">
                     <form id="editMaterialForm">
                         <input type="hidden" id="editMaterialId">
-                        <div class="material-form-grid">
-                            <div class="mb-3">
-                                <label for="editMaterialName" class="form-label">Material Name</label>
-                                <input type="text" class="form-control" id="editMaterialName" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="editMaterialCategory" class="form-label">Category</label>
-                                <select class="form-select" id="editMaterialCategory" required>
-                                    <option selected>Select Category</option>
-                                    <option>Transpo</option>
-                                    <option>Packaging</option>
-                                    <option>Raw Materials</option>
-                                    <option>Utilities</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="editMaterialUnit" class="form-label">Unit</label>
-                                <select class="form-select" id="editMaterialUnit" required>
-                                    <option value="piece">Piece</option>
-                                    <option value="pack">Pack</option>
-                                    <option value="box">Box</option>
-                                    <option value="liter">Liter</option>
-                                    <option value="kilogram">Kilogram</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="editMaterialCost" class="form-label">Cost per Unit</label>
-                                <div class="input-group">
-                                    <span class="input-group-text">₱</span>
-                                    <input type="number" class="form-control" id="editMaterialCost" step="0.01" required>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="editMaterialStock" class="form-label">Stock Quantity</label>
-                                <input type="number" class="form-control" id="editMaterialStock" required>
-                            </div>
+                        <div class="mb-3">
+                            <label for="editMaterialName" class="form-label">Material Name</label>
+                            <input type="text" class="form-control" id="editMaterialName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editMaterialCategory" class="form-label">Category</label>
+                            <input type="text" class="form-control" id="editMaterialCategory" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editMaterialUnit" class="form-label">Unit</label>
+                            <input type="text" class="form-control" id="editMaterialUnit" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editMaterialStock" class="form-label">Stock Quantity</label>
+                            <input type="number" class="form-control" id="editMaterialStock" required>
                         </div>
                         <div class="mb-3">
                             <label for="editMaterialDescription" class="form-label">Description</label>
@@ -1935,8 +1736,7 @@
                 }
                 
                 if (e.target.classList.contains('quantity') || 
-                    e.target.classList.contains('unit-price') || 
-                    e.target.classList.contains('discount')) {
+                    e.target.classList.contains('unit-price')) {
                     calculateItemTotal(e.target.closest('tr'));
                 }
                 
@@ -1952,17 +1752,6 @@
                         const row = e.target.closest('tr');
                         row.querySelector('.unit-price').value = product.price.toFixed(2);
                         calculateItemTotal(row);
-                    }
-                }
-                
-                // Product material select change
-                if (e.target.classList.contains('material-select') && e.target.closest('#productMaterials, #editProductMaterials')) {
-                    const materialId = e.target.value;
-                    const material = appState.materials.find(m => m.id === materialId);
-                    if (material) {
-                        const row = e.target.closest('tr');
-                        row.querySelector('.material-unit-cost').value = material.cost.toFixed(2);
-                        calculateProductMaterialTotal(row);
                     }
                 }
             });
@@ -2505,7 +2294,7 @@
             if (appState.sales.length === 0) {
                 salesTableBody.innerHTML = `
                     <tr>
-                        <td colspan="7" class="text-center text-muted py-4">No sales records found</td>
+                        <td colspan="3" class="text-center text-muted py-4">No sales records found</td>
                     </tr>
                 `;
                 return;
@@ -2517,10 +2306,6 @@
                     <tr>
                         <td>${sale.id}</td>
                         <td>${sale.date}</td>
-                        <td>${sale.customer || 'N/A'}</td>
-                        <td>${sale.items.length} items</td>
-                        <td class="currency">${sale.total.toFixed(2)}</td>
-                        <td class="currency">${sale.profit.toFixed(2)}</td>
                         <td>
                             <button class="btn btn-sm btn-outline-primary view-sale" data-id="${sale.id}">
                                 <i class="bi bi-eye"></i>
@@ -2567,7 +2352,7 @@
             if (appState.products.length === 0) {
                 productsTableBody.innerHTML = `
                     <tr>
-                        <td colspan="6" class="text-center text-muted py-4">No products found</td>
+                        <td colspan="4" class="text-center text-muted py-4">No products found</td>
                     </tr>
                 `;
                 return;
@@ -2581,11 +2366,9 @@
                 
                 productsHTML += `
                     <tr>
+                        <td>${product.id}</td>
                         <td>${product.name}</td>
-                        <td>${product.category}</td>
-                        <td class="currency">${product.cost.toFixed(2)}</td>
                         <td>${stockBadge}</td>
-                        <td class="currency">${product.price.toFixed(2)}</td>
                         <td>
                             <button class="btn btn-sm btn-outline-primary view-product" data-id="${product.id}">
                                 <i class="bi bi-eye"></i>
@@ -2632,7 +2415,7 @@
             if (appState.materials.length === 0) {
                 materialsTableBody.innerHTML = `
                     <tr>
-                        <td colspan="6" class="text-center text-muted py-4">No materials found</td>
+                        <td colspan="4" class="text-center text-muted py-4">No materials found</td>
                     </tr>
                 `;
                 return;
@@ -2646,10 +2429,8 @@
                 
                 materialsHTML += `
                     <tr>
+                        <td>${material.id}</td>
                         <td>${material.name}</td>
-                        <td>${material.category}</td>
-                        <td>${material.unit}</td>
-                        <td class="currency">${material.cost.toFixed(2)}</td>
                         <td>${stockBadge}</td>
                         <td>
                             <button class="btn btn-sm btn-outline-primary view-material" data-id="${material.id}">
@@ -2746,18 +2527,6 @@
                         <input type="number" class="form-control unit-price" value="0.00" step="0.01">
                     </div>
                 </td>
-                <td>
-                    <div class="input-group">
-                        <span class="input-group-text">₱</span>
-                        <input type="number" class="form-control discount" value="0.00" step="0.01">
-                    </div>
-                </td>
-                <td>
-                    <div class="input-group">
-                        <span class="input-group-text">₱</span>
-                        <input type="number" class="form-control total" value="0.00" step="0.01" readonly>
-                    </div>
-                </td>
                 <td><button type="button" class="btn btn-sm btn-danger remove-item"><i class="bi bi-trash"></i></button></td>
             `;
             saleItems.appendChild(newRow);
@@ -2771,7 +2540,7 @@
                 calculateSaleTotals();
             });
             
-            const inputs = newRow.querySelectorAll('.quantity, .unit-price, .discount');
+            const inputs = newRow.querySelectorAll('.quantity, .unit-price');
             inputs.forEach(input => {
                 input.addEventListener('input', function() {
                     calculateItemTotal(newRow);
@@ -2805,18 +2574,6 @@
                         <input type="number" class="form-control unit-price" value="0.00" step="0.01">
                     </div>
                 </td>
-                <td>
-                    <div class="input-group">
-                        <span class="input-group-text">₱</span>
-                        <input type="number" class="form-control discount" value="0.00" step="0.01">
-                    </div>
-                </td>
-                <td>
-                    <div class="input-group">
-                        <span class="input-group-text">₱</span>
-                        <input type="number" class="form-control total" value="0.00" step="0.01" readonly>
-                    </div>
-                </td>
                 <td><button type="button" class="btn btn-sm btn-danger remove-item"><i class="bi bi-trash"></i></button></td>
             `;
             editSaleItems.appendChild(newRow);
@@ -2830,7 +2587,7 @@
                 calculateEditSaleTotals();
             });
             
-            const inputs = newRow.querySelectorAll('.quantity, .unit-price, .discount');
+            const inputs = newRow.querySelectorAll('.quantity, .unit-price');
             inputs.forEach(input => {
                 input.addEventListener('input', function() {
                     calculateEditItemTotal(newRow);
@@ -2858,18 +2615,6 @@
                     </select>
                 </td>
                 <td><input type="number" class="form-control material-quantity" value="1" min="1"></td>
-                <td>
-                    <div class="input-group">
-                        <span class="input-group-text">₱</span>
-                        <input type="number" class="form-control material-unit-cost" value="0.00" step="0.01" readonly>
-                    </div>
-                </td>
-                <td>
-                    <div class="input-group">
-                        <span class="input-group-text">₱</span>
-                        <input type="number" class="form-control material-total-cost" value="0.00" step="0.01" readonly>
-                    </div>
-                </td>
                 <td><button type="button" class="btn btn-sm btn-danger remove-product-material"><i class="bi bi-trash"></i></button></td>
             `;
             productMaterials.appendChild(newRow);
@@ -2891,7 +2636,6 @@
                 const materialId = this.value;
                 const material = appState.materials.find(m => m.id === materialId);
                 if (material) {
-                    newRow.querySelector('.material-unit-cost').value = material.cost.toFixed(2);
                     calculateProductMaterialTotal(newRow);
                 }
             });
@@ -2908,18 +2652,6 @@
                     </select>
                 </td>
                 <td><input type="number" class="form-control material-quantity" value="1" min="1"></td>
-                <td>
-                    <div class="input-group">
-                        <span class="input-group-text">₱</span>
-                        <input type="number" class="form-control material-unit-cost" value="0.00" step="0.01" readonly>
-                    </div>
-                </td>
-                <td>
-                    <div class="input-group">
-                        <span class="input-group-text">₱</span>
-                        <input type="number" class="form-control material-total-cost" value="0.00" step="0.01" readonly>
-                    </div>
-                </td>
                 <td><button type="button" class="btn btn-sm btn-danger remove-product-material"><i class="bi bi-trash"></i></button></td>
             `;
             editProductMaterials.appendChild(newRow);
@@ -2941,7 +2673,6 @@
                 const materialId = this.value;
                 const material = appState.materials.find(m => m.id === materialId);
                 if (material) {
-                    newRow.querySelector('.material-unit-cost').value = material.cost.toFixed(2);
                     calculateEditProductMaterialTotal(newRow);
                 }
             });
@@ -2950,105 +2681,51 @@
         function calculateItemTotal(row) {
             const quantity = parseFloat(row.querySelector('.quantity').value) || 0;
             const unitPrice = parseFloat(row.querySelector('.unit-price').value) || 0;
-            const discount = parseFloat(row.querySelector('.discount').value) || 0;
             
-            const subtotal = quantity * unitPrice;
-            const total = subtotal - discount;
+            const total = quantity * unitPrice;
             
-            row.querySelector('.total').value = total.toFixed(2);
             calculateSaleTotals();
         }
         
         function calculateEditItemTotal(row) {
             const quantity = parseFloat(row.querySelector('.quantity').value) || 0;
             const unitPrice = parseFloat(row.querySelector('.unit-price').value) || 0;
-            const discount = parseFloat(row.querySelector('.discount').value) || 0;
             
-            const subtotal = quantity * unitPrice;
-            const total = subtotal - discount;
+            const total = quantity * unitPrice;
             
-            row.querySelector('.total').value = total.toFixed(2);
             calculateEditSaleTotals();
         }
         
         function calculateProductMaterialTotal(row) {
             const quantity = parseFloat(row.querySelector('.material-quantity').value) || 0;
-            const cost = parseFloat(row.querySelector('.material-unit-cost').value) || 0;
             
-            const total = quantity * cost;
-            
-            row.querySelector('.material-total-cost').value = total.toFixed(2);
             calculateProductCost();
         }
         
         function calculateEditProductMaterialTotal(row) {
             const quantity = parseFloat(row.querySelector('.material-quantity').value) || 0;
-            const cost = parseFloat(row.querySelector('.material-unit-cost').value) || 0;
             
-            const total = quantity * cost;
-            
-            row.querySelector('.material-total-cost').value = total.toFixed(2);
             calculateEditProductCost();
         }
         
         function calculateSaleTotals() {
-            const rows = document.querySelectorAll('#saleItems tr');
-            let subtotal = 0;
-            
-            rows.forEach(row => {
-                const total = parseFloat(row.querySelector('.total').value) || 0;
-                subtotal += total;
-            });
-            
-            document.getElementById('subtotal').value = subtotal.toFixed(2);
-            document.getElementById('grandTotal').value = subtotal.toFixed(2);
+            // This function is kept for compatibility but doesn't need to do anything
+            // since we removed the subtotal and grand total from the sale form
         }
         
         function calculateEditSaleTotals() {
-            const rows = document.querySelectorAll('#editSaleItems tr');
-            let subtotal = 0;
-            
-            rows.forEach(row => {
-                const total = parseFloat(row.querySelector('.total').value) || 0;
-                subtotal += total;
-            });
-            
-            document.getElementById('editSubtotal').value = subtotal.toFixed(2);
-            document.getElementById('editGrandTotal').value = subtotal.toFixed(2);
+            // This function is kept for compatibility but doesn't need to do anything
+            // since we removed the subtotal and grand total from the sale form
         }
         
         function calculateProductCost() {
-            const rows = document.querySelectorAll('#productMaterials tr');
-            let productCost = 0;
-            
-            rows.forEach(row => {
-                const total = parseFloat(row.querySelector('.material-total-cost').value) || 0;
-                productCost += total;
-            });
-            
-            document.getElementById('productCost').value = productCost.toFixed(2);
-            
-            // Calculate selling price with markup
-            const markup = appState.settings.priceMarkup || 30;
-            const sellingPrice = productCost * (1 + markup / 100);
-            document.getElementById('productPrice').value = sellingPrice.toFixed(2);
+            // This function is kept for compatibility but doesn't need to do anything
+            // since we removed the cost calculation from the product form
         }
         
         function calculateEditProductCost() {
-            const rows = document.querySelectorAll('#editProductMaterials tr');
-            let productCost = 0;
-            
-            rows.forEach(row => {
-                const total = parseFloat(row.querySelector('.material-total-cost').value) || 0;
-                productCost += total;
-            });
-            
-            document.getElementById('editProductCost').value = productCost.toFixed(2);
-            
-            // Calculate selling price with markup
-            const markup = appState.settings.priceMarkup || 30;
-            const sellingPrice = productCost * (1 + markup / 100);
-            document.getElementById('editProductPrice').value = sellingPrice.toFixed(2);
+            // This function is kept for compatibility but doesn't need to do anything
+            // since we removed the cost calculation from the product form
         }
         
         function saveSale() {
@@ -3067,15 +2744,13 @@
                 if (product && productId !== 'Select Product') {
                     const quantity = parseFloat(row.querySelector('.quantity').value) || 0;
                     const unitPrice = parseFloat(row.querySelector('.unit-price').value) || 0;
-                    const discount = parseFloat(row.querySelector('.discount').value) || 0;
-                    const itemTotal = parseFloat(row.querySelector('.total').value) || 0;
+                    const itemTotal = quantity * unitPrice;
                     
                     items.push({
                         productId,
                         productName: product.name,
                         quantity,
                         unitPrice,
-                        discount,
                         total: itemTotal
                     });
                     
@@ -3134,18 +2809,6 @@
                             <input type="number" class="form-control unit-price" value="0.00" step="0.01">
                         </div>
                     </td>
-                    <td>
-                        <div class="input-group">
-                            <span class="input-group-text">₱</span>
-                            <input type="number" class="form-control discount" value="0.00" step="0.01">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="input-group">
-                            <span class="input-group-text">₱</span>
-                            <input type="number" class="form-control total" value="0.00" step="0.01" readonly>
-                        </div>
-                    </td>
                     <td><button type="button" class="btn btn-sm btn-danger remove-item"><i class="bi bi-trash"></i></button></td>
                 </tr>
             `;
@@ -3154,11 +2817,9 @@
         
         function saveProduct() {
             const name = document.getElementById('productName').value;
-            const category = document.getElementById('productCategory').value;
             const stock = parseInt(document.getElementById('productStock').value) || 0;
-            const description = document.getElementById('productDescription').value;
             
-            if (!name || category === 'Select Category') {
+            if (!name) {
                 showToast('Please fill in all required fields', 'warning');
                 return;
             }
@@ -3174,25 +2835,14 @@
                 
                 if (material && materialId !== 'Select Material') {
                     const quantity = parseFloat(row.querySelector('.material-quantity').value) || 0;
-                    const unitCost = parseFloat(row.querySelector('.material-unit-cost').value) || 0;
-                    const materialTotal = parseFloat(row.querySelector('.material-total-cost').value) || 0;
                     
                     materialsUsed.push({
                         materialId,
                         materialName: material.name,
-                        quantity,
-                        unitCost,
-                        total: materialTotal
+                        quantity
                     });
-                    
-                    cost += materialTotal;
                 }
             });
-            
-            if (materialsUsed.length === 0) {
-                showToast('Please add at least one material to the product', 'warning');
-                return;
-            }
             
             // Calculate selling price with markup
             const markup = appState.settings.priceMarkup || 30;
@@ -3202,11 +2852,9 @@
             const product = {
                 id: 'P' + Date.now(),
                 name,
-                category,
                 cost,
                 stock,
                 price,
-                description,
                 materialsUsed
             };
             
@@ -3232,18 +2880,6 @@
                         </select>
                     </td>
                     <td><input type="number" class="form-control material-quantity" value="1" min="1"></td>
-                    <td>
-                        <div class="input-group">
-                            <span class="input-group-text">₱</span>
-                            <input type="number" class="form-control material-unit-cost" value="0.00" step="0.01" readonly>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="input-group">
-                            <span class="input-group-text">₱</span>
-                            <input type="number" class="form-control material-total-cost" value="0.00" step="0.01" readonly>
-                        </div>
-                    </td>
                     <td><button type="button" class="btn btn-sm btn-danger remove-product-material"><i class="bi bi-trash"></i></button></td>
                 </tr>
             `;
@@ -3254,11 +2890,10 @@
             const name = document.getElementById('materialName').value;
             const category = document.getElementById('materialCategory').value;
             const unit = document.getElementById('materialUnit').value;
-            const cost = parseFloat(document.getElementById('materialCost').value) || 0;
             const stock = parseInt(document.getElementById('materialStock').value) || 0;
             const description = document.getElementById('materialDescription').value;
             
-            if (!name || category === 'Select Category') {
+            if (!name || !category || !unit) {
                 showToast('Please fill in all required fields', 'warning');
                 return;
             }
@@ -3269,7 +2904,6 @@
                 name,
                 category,
                 unit,
-                cost,
                 stock,
                 description
             };
@@ -3330,13 +2964,8 @@
                         lastRow.querySelector('.product-select').value = item.productId;
                         lastRow.querySelector('.quantity').value = item.quantity;
                         lastRow.querySelector('.unit-price').value = item.unitPrice;
-                        lastRow.querySelector('.discount').value = item.discount;
-                        lastRow.querySelector('.total').value = item.total;
                     }
                 });
-                
-                // Update totals
-                calculateEditSaleTotals();
                 
                 // Show the edit modal
                 const editModal = new bootstrap.Modal(document.getElementById('editSaleModal'));
@@ -3363,15 +2992,13 @@
                 if (product && productId !== 'Select Product') {
                     const quantity = parseFloat(row.querySelector('.quantity').value) || 0;
                     const unitPrice = parseFloat(row.querySelector('.unit-price').value) || 0;
-                    const discount = parseFloat(row.querySelector('.discount').value) || 0;
-                    const itemTotal = parseFloat(row.querySelector('.total').value) || 0;
+                    const itemTotal = quantity * unitPrice;
                     
                     items.push({
                         productId,
                         productName: product.name,
                         quantity,
                         unitPrice,
-                        discount,
                         total: itemTotal
                     });
                     
@@ -3417,14 +3044,14 @@
                         materialsHTML += `
                             <div class="d-flex justify-content-between mb-2">
                                 <span>${material.materialName}</span>
-                                <span>${material.quantity} x ${appState.currencySymbol}${material.unitCost} = ${appState.currencySymbol}${material.total}</span>
+                                <span>${material.quantity}</span>
                             </div>
                         `;
                     });
                     materialsHTML += '</div>';
                 }
                 
-                showToast(`Product Details:<br>Name: ${product.name}<br>Category: ${product.category}<br>Cost: ${appState.currencySymbol}${product.cost}<br>Price: ${appState.currencySymbol}${product.price.toFixed(2)}<br>Stock: ${product.stock}${materialsHTML}`, 'info', 10000);
+                showToast(`Product Details:<br>Name: ${product.name}<br>Stock: ${product.stock}${materialsHTML}`, 'info', 10000);
             }
         }
         
@@ -3436,9 +3063,7 @@
                 // Populate the edit form with product data
                 document.getElementById('editProductId').value = product.id;
                 document.getElementById('editProductName').value = product.name;
-                document.getElementById('editProductCategory').value = product.category;
                 document.getElementById('editProductStock').value = product.stock;
-                document.getElementById('editProductDescription').value = product.description || '';
                 
                 // Clear existing materials
                 document.getElementById('editProductMaterials').innerHTML = '';
@@ -3452,13 +3077,8 @@
                     if (lastRow && materialObj) {
                         lastRow.querySelector('.material-select').value = material.materialId;
                         lastRow.querySelector('.material-quantity').value = material.quantity;
-                        lastRow.querySelector('.material-unit-cost').value = material.unitCost;
-                        lastRow.querySelector('.material-total-cost').value = material.total;
                     }
                 });
-                
-                // Update totals
-                calculateEditProductCost();
                 
                 // Show the edit modal
                 const editModal = new bootstrap.Modal(document.getElementById('editProductModal'));
@@ -3471,11 +3091,9 @@
             
             const productId = document.getElementById('editProductId').value;
             const name = document.getElementById('editProductName').value;
-            const category = document.getElementById('editProductCategory').value;
             const stock = parseInt(document.getElementById('editProductStock').value) || 0;
-            const description = document.getElementById('editProductDescription').value;
             
-            if (!name || category === 'Select Category') {
+            if (!name) {
                 showToast('Please fill in all required fields', 'warning');
                 return;
             }
@@ -3491,25 +3109,14 @@
                 
                 if (material && materialId !== 'Select Material') {
                     const quantity = parseFloat(row.querySelector('.material-quantity').value) || 0;
-                    const unitCost = parseFloat(row.querySelector('.material-unit-cost').value) || 0;
-                    const materialTotal = parseFloat(row.querySelector('.material-total-cost').value) || 0;
                     
                     materialsUsed.push({
                         materialId,
                         materialName: material.name,
-                        quantity,
-                        unitCost,
-                        total: materialTotal
+                        quantity
                     });
-                    
-                    cost += materialTotal;
                 }
             });
-            
-            if (materialsUsed.length === 0) {
-                showToast('Please add at least one material to the product', 'warning');
-                return;
-            }
             
             // Calculate selling price with markup
             const markup = appState.settings.priceMarkup || 30;
@@ -3519,11 +3126,9 @@
             const productIndex = appState.products.findIndex(p => p.id === productId);
             if (productIndex !== -1) {
                 appState.products[productIndex].name = name;
-                appState.products[productIndex].category = category;
                 appState.products[productIndex].cost = cost;
                 appState.products[productIndex].stock = stock;
                 appState.products[productIndex].price = price;
-                appState.products[productIndex].description = description;
                 appState.products[productIndex].materialsUsed = materialsUsed;
                 
                 saveProductsToStorage();
@@ -3541,7 +3146,7 @@
         function viewMaterial(materialId) {
             const material = appState.materials.find(m => m.id === materialId);
             if (material) {
-                showToast(`Material Details:<br>Name: ${material.name}<br>Category: ${material.category}<br>Unit: ${material.unit}<br>Cost: ${appState.currencySymbol}${material.cost}<br>Stock: ${material.stock}`, 'info', 10000);
+                showToast(`Material Details:<br>Name: ${material.name}<br>Category: ${material.category}<br>Unit: ${material.unit}<br>Stock: ${material.stock}<br>Description: ${material.description || 'N/A'}`, 'info', 10000);
             }
         }
         
@@ -3555,7 +3160,6 @@
                 document.getElementById('editMaterialName').value = material.name;
                 document.getElementById('editMaterialCategory').value = material.category;
                 document.getElementById('editMaterialUnit').value = material.unit;
-                document.getElementById('editMaterialCost').value = material.cost;
                 document.getElementById('editMaterialStock').value = material.stock;
                 document.getElementById('editMaterialDescription').value = material.description || '';
                 
@@ -3572,11 +3176,10 @@
             const name = document.getElementById('editMaterialName').value;
             const category = document.getElementById('editMaterialCategory').value;
             const unit = document.getElementById('editMaterialUnit').value;
-            const cost = parseFloat(document.getElementById('editMaterialCost').value) || 0;
             const stock = parseInt(document.getElementById('editMaterialStock').value) || 0;
             const description = document.getElementById('editMaterialDescription').value;
             
-            if (!name || category === 'Select Category') {
+            if (!name || !category || !unit) {
                 showToast('Please fill in all required fields', 'warning');
                 return;
             }
@@ -3587,7 +3190,6 @@
                 appState.materials[materialIndex].name = name;
                 appState.materials[materialIndex].category = category;
                 appState.materials[materialIndex].unit = unit;
-                appState.materials[materialIndex].cost = cost;
                 appState.materials[materialIndex].stock = stock;
                 appState.materials[materialIndex].description = description;
                 
@@ -3938,7 +3540,7 @@
             if (!hasResults) {
                 document.getElementById('salesTableBody').innerHTML = `
                     <tr>
-                        <td colspan="7" class="text-center text-muted py-4">No sales records found matching "${query}"</td>
+                        <td colspan="3" class="text-center text-muted py-4">No sales records found matching "${query}"</td>
                     </tr>
                 `;
             }
@@ -3962,7 +3564,7 @@
             if (!hasResults) {
                 document.getElementById('productsTableBody').innerHTML = `
                     <tr>
-                        <td colspan="6" class="text-center text-muted py-4">No products found matching "${query}"</td>
+                        <td colspan="4" class="text-center text-muted py-4">No products found matching "${query}"</td>
                     </tr>
                 `;
             }
@@ -3986,7 +3588,7 @@
             if (!hasResults) {
                 document.getElementById('materialsTableBody').innerHTML = `
                     <tr>
-                        <td colspan="6" class="text-center text-muted py-4">No materials found matching "${query}"</td>
+                        <td colspan="4" class="text-center text-muted py-4">No materials found matching "${query}"</td>
                     </tr>
                 `;
             }
